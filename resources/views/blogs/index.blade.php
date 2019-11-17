@@ -18,7 +18,7 @@
                             {{session()->get('alert')}}
                         </div>
                     @endif
-                    Display all the blog here
+                    Display all the blogs here
 
                     <table class="table">
                             <thead>
