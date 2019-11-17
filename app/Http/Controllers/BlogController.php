@@ -41,11 +41,13 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //dd($request);
-        //Method 1
+
+        /**Method 1
         $blog =  new Blog();
         $blog->title = $request->get('title');
         $blog->body = $request->get('body');
-        $blog->save();
+        $blog->save(); 
+        */
 
         //Method 2 - Mass assignable
        //$blog = Blog::create($request->only('title', 'body'));
@@ -54,6 +56,7 @@ class BlogController extends Controller
         // $user = auth()->user();
         // $blog->user()->associate($user);
         // $article->save();
+
         //Method 2
         $user = auth()->user();
         $user->blogs()->create($request->only('title','body'));
