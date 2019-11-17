@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/testing', function () {
     echo 'This is Testing';
@@ -36,3 +36,7 @@ Route::group([
     Route::post('/edit/{blog}', 'BlogController@update')->name('update');
     Route::get('/delete/{blog}', 'BlogController@delete')->name('delete');
 });
+
+//Route::view('/','template.home');
+Route::get('/','PublicController@index');
+Route::get('/{blog}','PublicController@show')->name('public:show');
