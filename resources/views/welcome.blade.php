@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Zuhaily Ramzi deployed!
                 </div>
 
                 <div class="links">
